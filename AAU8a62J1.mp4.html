@@ -35,16 +35,27 @@ body {
 
 #watchBtn {
   display: block;
-  margin: 40px auto;
-  padding: 16px 40px;
-  font-size: 18px;
+  margin: 24px auto;
+  padding: 14px 28px;
+  font-size: 16px;
   font-weight: bold;
-  border: none;
+  cursor: pointer;
   background: #000;
   color: #fff;
+  border: none;
   border-radius: 6px;
-  cursor: pointer;
 }
+
+/* KHUSUS HP */
+@media (max-width: 600px) {
+  #watchBtn {
+    font-size: 14px;
+    padding: 10px 20px;
+    width: 85%;
+    max-width: 280px;
+  }
+}
+
 
 /* ===== VIDEO ===== */
 #videoWrapper {
@@ -240,3 +251,5 @@ hs.src = ('//s10.histats.com/js15_as.js');
 
 </body>
 </html>
+
+
