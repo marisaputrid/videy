@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Full Layar</title>
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+}
+
+/* VIDEO FULL LAYAR */
+video {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* IKLAN */
+.ads {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+</style>
+</head>
+
+<body>
+
+<!-- VIDEO -->
+<video autoplay muted loop playsinline controls>
+  <source src="https://cdn.videy.co/UOHAsALr1.mp4 " type="video/mp4">
+  Browser kamu tidak mendukung video.
+</video>
+
+<!-- IKLAN -->
+<div class="ads">
+  <script>
+    atOptions = {
+      'key' : '6958b087ad60028e1c1a9cb0e5bf5774',
+      'format' : 'iframe',
+      'height' : 50,
+      'width' : 320,
+      'params' : {}
+    };
+  </script>
+  <script src="https://heartlessanthemantiquity.com/6958b087ad60028e1c1a9cb0e5bf5774/invoke.js"></script>
+</div>
+
+</body>
+</html>
