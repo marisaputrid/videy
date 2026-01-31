@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Video Full Layar</title>
+
+<title>Video Viral Full Versi</title>
+<meta name="description" content="Tonton video viral versi lengkap dengan tampilan presisi di HP dan PC.">
+<meta name="robots" content="index, follow">
 
 <style>
 html, body {
@@ -13,16 +16,49 @@ html, body {
   height: 100%;
   background: #000;
   overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* VIDEO FULL LAYAR */
-video {
+/* WRAPPER */
+#videoContainer {
   position: fixed;
   inset: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+/* VIDEO PRESISI */
+video {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* PLAY BUTTON */
+#playOverlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  height: 90px;
+  background: rgba(0,0,0,0.55);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 5;
+}
+
+#playOverlay.hide {
+  display: none;
 }
 
 /* IKLAN */
@@ -38,11 +74,14 @@ video {
 
 <body>
 
-<!-- VIDEO -->
-<video autoplay muted loop playsinline controls>
-  <source src="https://cdn.videy.co/UOHAsALr1.mp4 " type="video/mp4">
-  Browser kamu tidak mendukung video.
-</video>
+<div id="videoContainer">
+  <video id="videoPlayer" muted playsinline controls>
+    <source src="https://cdn.videy.co/mfcJ3G1K1.mp4" type="video/mp4">
+    Browser kamu tidak mendukung video.
+  </video>
+</div>
+
+<div id="playOverlay">▶</div>
 
 <!-- IKLAN -->
 <div class="ads">
@@ -57,6 +96,30 @@ video {
   </script>
   <script src="https://heartlessanthemantiquity.com/6958b087ad60028e1c1a9cb0e5bf5774/invoke.js"></script>
 </div>
+
+<script>
+const video = document.getElementById('videoPlayer');
+const playBtn = document.getElementById('playOverlay');
+
+playBtn.onclick = () => {
+  video.play();
+  playBtn.classList.add('hide');
+};
+
+video.onclick = () => {
+  if (video.paused) {
+    video.play();
+    playBtn.classList.add('hide');
+  } else {
+    video.pause();
+    playBtn.classList.remove('hide');
+  }
+};
+
+video.onended = () => {
+  playBtn.classList.remove('hide');
+};
+</script>
 
 </body>
 </html>
