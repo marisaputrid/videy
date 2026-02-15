@@ -1,152 +1,93 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Only REAL tummy lovers are allowed to like this 🥵😈 </title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 10px;
+    }
+    .container {
+      width: 100%;
+      max-width: 360px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .download-btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      background-color: #24292e;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 6px;
+      margin: 10px 0;
+      font-weight: bold;
+      transition: background 0.3s;
+      word-wrap: break-word;
+    }
+    .download-btn:hover {
+      background-color: #000;
+    }
 
-<style>
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  overflow: hidden;
-  font-family: Arial, Helvetica, sans-serif;
-}
+    .gif-btn img {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 12px;
+    }
 
-/* CONTAINER */
-#videoContainer {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #000;
-}
-
-/* VIDEO */
-#videoPlayer {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  background: #000;
-}
-
-/* PLAY OVERLAY */
-#playOverlay {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90px;
-  height: 90px;
-  background: rgba(0,0,0,0.6);
-  border-radius: 50%;
-  color: #fff;
-  font-size: 50px;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 5;
-}
-
-/* IKLAN LANGSUNG TAMPIL */
-.ads {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-}
-</style>
+    /* Khusus layar kecil */
+    @media (max-width: 480px) {
+      body { padding: 10px; }
+      .container { padding: 16px; }
+      h1 { font-size: 18px; }
+      .download-btn { font-size: 15px; padding: 12px; }
+    }
+  </style>
 </head>
-
 <body>
 
-<div id="videoContainer">
-  <video
-    id="videoPlayer"
-    autoplay
-    muted
-    playsinline
-    preload="auto"
-    controlsList="nodownload noplaybackrate"
-    disablePictureInPicture
-  >
-    <source src="  https://github.com/marisaputrid/cdngood/raw/refs/heads/main/66.mp4  " type="video/mp4">
-    Browser kamu tidak mendukung video.
-  </video>
-</div>
+  <div class="container">
+    <h1>Click Link to Watch</h1>
 
-<div id="playOverlay">▶</div>
-
-<!-- IKLAN (TANPA DELAY) -->
-<div class="ads">
-   <a href="https://possessedannihilation.com/jzm0chy69?key=c3f0ab6b8739c233000e7f8f3aa104ac" class="gif-btn">
-      <img border="0" alt="" src="https://cdn.storageimagedisplay.com/cti/fe/46/8e/fe468e7004f06d7c32fb2c337f7c0b66/1716370395.jpg"  alt="Iklan GIF">
+    <a href="  https://bio-shortlink.com/xklas  " class="download-btn">
+  VID Below💯
     </a>
-</div>
+ <h1>Click Link to Watch</h1>
+    <a href="https://cdn.videy.co/8f3d4cd71.mp4  " class="download-btn">
+     Alternatif l!nk
+    </a>
+ 
 
-<script>
-const video = document.getElementById('videoPlayer');
-const playBtn = document.getElementById('playOverlay');
-
-/* MATIKAN CONTROLS */
-video.controls = false;
-
-/* KALO AUTOPLAY GAGAL (HP TERTENTU) */
-video.play().catch(() => {
-  playBtn.style.display = 'flex';
-});
-
-/* PLAY MANUAL */
-playBtn.onclick = () => {
-  video.play();
-  playBtn.style.display = 'none';
-};
-
-/* TAP VIDEO */
-video.onclick = () => {
-  if (video.paused) {
-    video.play();
-    playBtn.style.display = 'none';
-  } else {
-    video.pause();
-    playBtn.style.display = 'flex';
-  }
-};
-
-/* SELESAI */
-video.onended = () => {
-  playBtn.style.display = 'flex';
-};
-
-/* BLOK KLIK KANAN */
-document.addEventListener('contextmenu', e => e.preventDefault());
-
-/* BLOK KEYBOARD */
-document.addEventListener('keydown', e => {
-  const block = [' ', 'k', 'f', 'i', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
-  if (block.includes(e.key)) e.preventDefault();
-});
-
-/* KUNCI SPEED */
-video.addEventListener('ratechange', () => {
-  video.playbackRate = 1;
-});
-
-/* MATIKAN PIP */
-video.addEventListener('enterpictureinpicture', () => {
-  document.exitPictureInPicture();
-});
-</script>
+  </div>
 
 </body>
 </html>
 
-<!-- Histats.com  START  (aync)-->
+ <!-- Histats.com  START  (aync)-->
 <script type="text/javascript">var _Hasync= _Hasync|| [];
 _Hasync.push(['Histats.start', '1,5004471,4,0,0,0,00010000']);
 _Hasync.push(['Histats.fasi', '1']);
